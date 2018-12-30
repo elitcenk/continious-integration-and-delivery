@@ -27,6 +27,7 @@ public class EmailController {
 
 		MimeMessage mimeMessage = mailSender.createMimeMessage();
 		MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
+		mimeMessageHelper.setFrom("sendercenk@maillll.com");
 		mimeMessageHelper.setText("Sample text message.\nSample text message.\nSample text message.\nSample text message.\nSample text message.", true);
 		mimeMessageHelper.setTo(InternetAddress.parse("ecenkalp@mailll.com"));
 		mimeMessage.setSubject("Sample Subject");

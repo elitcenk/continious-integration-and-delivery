@@ -1,4 +1,4 @@
-package tr.cenk.continuous_deployment.controller.mail.it;
+package tr.cenk.continuous_deployment.controller.mail;
 
 import java.net.URL;
 
@@ -12,11 +12,12 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import tr.cenk.continuous_deployment.Application;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 @RunWith (SpringRunner.class)
-@SpringBootTest (webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest (classes = {Application.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class EmailControllerIT {
 
 	@LocalServerPort
